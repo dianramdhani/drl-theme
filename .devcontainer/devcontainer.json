@@ -1,14 +1,24 @@
 {
-    "name": "Wordpress",
-    "dockerComposeFile": "docker-compose.yml",
-    "service": "wordpress",
-    "workspaceFolder": "/var/www/html/wp-content/themes/drl-theme",
-    "shutdownAction": "stopCompose",
-    "extensions": [
-        "GitHub.copilot",
-        "esbenp.prettier-vscode",
-        "bmewburn.vscode-intelephense-client",
-        "wayou.vscode-todo-highlight",
-        "wordpresstoolbox.wordpress-toolbox"
-    ]
+  "name": "Wordpress",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "wordpress",
+  "workspaceFolder": "/var/www/html/wp-content/themes/drl-theme",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "GitHub.copilot",
+    "esbenp.prettier-vscode",
+    "wayou.vscode-todo-highlight",
+    "wordpresstoolbox.wordpress-toolbox",
+    "yogensia.searchwpdocs",
+    "bmewburn.vscode-intelephense-client"
+  ],
+  "settings": {
+    "workbench.startupEditor": "none",
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }
