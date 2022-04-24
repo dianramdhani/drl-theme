@@ -27,6 +27,7 @@ function drl_theme_register_scripts()
     wp_enqueue_script('dashforge', get_template_directory_uri() . '/assets/js/dashforge.js', array('dashforge-fix'), false, true);
     wp_enqueue_script('dashforge-aside', get_template_directory_uri() . '/assets/js/dashforge.aside.js', array('dashforge'), false, true);
     wp_enqueue_script('dashforge-sample-data', get_template_directory_uri() . '/assets/js/dashforge.sampledata.js', array(), false, true);
-    wp_enqueue_script('dashforge-one', get_template_directory_uri() . '/assets/js/dashboard-one.js', array('dashforge'), false, true);
+    wp_enqueue_script('cookie', get_template_directory_uri() . '/lib/js-cookie/js.cookie.js', array(), false, true);
+    wp_enqueue_script('dashforge-one', get_template_directory_uri() . '/assets/js/dashboard-one.js', array('dashforge', 'cookie'), false, true);
 }
 add_action('wp_enqueue_scripts', 'drl_theme_register_scripts');
