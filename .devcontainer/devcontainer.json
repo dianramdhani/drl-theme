@@ -1,0 +1,14 @@
+{
+    "name": "Wordpress",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "wordpress",
+    "workspaceFolder": "/var/www/html/wp-content/themes/drl-theme",
+    "shutdownAction": "stopCompose",
+    "extensions": [
+        "GitHub.copilot",
+        "esbenp.prettier-vscode",
+        "bmewburn.vscode-intelephense-client",
+        "wayou.vscode-todo-highlight",
+        "wordpresstoolbox.wordpress-toolbox"
+    ]
+}
