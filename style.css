@@ -6,3 +6,7 @@ Author: Dian Ramdhani
 Author URI: https://github.com/dianramdhani
 Description: This is a theme for the DRL website.
 */
+
+html {
+  overflow: hidden;
+}

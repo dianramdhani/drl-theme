@@ -7,7 +7,8 @@ function drl_theme_register_styles()
     wp_enqueue_style('jqvmap', get_template_directory_uri() . '/lib/jqvmap/jqvmap.min.css');
     wp_enqueue_style('dashforge', get_template_directory_uri() . '/assets/css/dashforge.css', array('fontawesome', 'ionicons'));
     wp_enqueue_style('dashforge-dashboard', get_template_directory_uri() . '/assets/css/dashforge.dashboard.css', array('dashforge'));
-    wp_enqueue_style('dashforge-dark', get_template_directory_uri() . '/assets/css/skin.dark.css', array('dashforge'));
+    wp_enqueue_style('dashforge-cool', get_template_directory_uri() . '/assets/css/skin.cool.css', array('dashforge'));
+    wp_enqueue_style('style', get_template_directory_uri() . '/style.css', array());
 }
 add_action('wp_enqueue_scripts', 'drl_theme_register_styles');
 
