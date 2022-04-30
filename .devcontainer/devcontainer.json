@@ -20,5 +20,6 @@
     "editor.guides.bracketPairs": "active",
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "onCreateCommand": "apt update && apt upgrade -y && apt install -y git"
 }
