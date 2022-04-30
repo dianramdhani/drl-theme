@@ -10,5 +10,6 @@
         "bmewburn.vscode-intelephense-client",
         "wayou.vscode-todo-highlight",
         "wordpresstoolbox.wordpress-toolbox"
-    ]
+    ],
+    "onCreateCommand": "apt update && apt upgrade -y && apt install -y git"
 }
