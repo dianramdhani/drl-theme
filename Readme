@@ -1,0 +1,14 @@
+# Wordpress Notebook
+
+Catatan pembuatan custom theme wordpress.
+
+## List Fungsi
+List fungsi yang biasa sering digunakan.
+
+```php
+/*
+Fungsi untuk menghasilkan uri file static.
+$file: String - File path
+*/
+get_theme_file_uri( string $file = '' )
+```
