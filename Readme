@@ -9,7 +9,7 @@ List fungsi yang biasa sering digunakan.
 ```php
 /*
 Fungsi untuk menghasilkan uri file static.
-$file: String - File path
+$file: File path
 */
 get_theme_file_uri( string $file = '' )
 
@@ -17,4 +17,11 @@ get_theme_file_uri( string $file = '' )
 Fungsi untuk menghasilkan lokasi template. Fungsi cara cepat untuk replace path file static di layout. Contoh penggunaan: src="<?= get_template_directory_uri(); ?>/themes/resume/assets/img/testimonials/testimonials-1.jpg"
 */
 get_template_directory_uri()
+
+/*
+Fungsi untuk mengambil value General setting.
+$show: Nama value yang akan ditampilkan. Contoh name.
+$filter: Gatau!
+*/
+get_bloginfo(string $show = '', string $filter = 'raw')
 ```

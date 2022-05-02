@@ -27,3 +27,62 @@ function drl_theme_register_scripts()
     wp_enqueue_script('main-theme', get_template_directory_uri() . '/themes/resume/assets/js/main.js', array(), false, true);
 }
 add_action('wp_enqueue_scripts', 'drl_theme_register_scripts');
+
+function drl_theme_sanitize_image($image, $setting)
+{
+    /*
+     * Array of valid image file types.
+     *
+     * The array includes image mime types that are included in wp_get_mime_types()
+     */
+    $mimes = array(
+        'jpg|jpeg|jpe' => 'image/jpeg',
+        'gif' => 'image/gif',
+        'png' => 'image/png',
+        'bmp' => 'image/bmp',
+        'tif|tiff' => 'image/tiff',
+        'ico' => 'image/x-icon'
+    );
+    // Return an array with file extension and mime_type.
+    $file = wp_check_filetype($image, $mimes);
+    // If $image has a valid mime_type, return it; otherwise, return the default.
+    return ($file['ext'] ? $image : $setting->default);
+}
+
+function drl_theme_sanitize_text($input)
+{
+    return wp_kses_post(force_balance_tags($input));
+}
+
+function drl_theme_customize_register($wp_customize)
+{
+    $wp_customize->add_section('resume_setting', array(
+        'title' => __('Resume Setting', 'drl_theme'),
+        'priority' => 10,
+        'capability' => 'edit_theme_options',
+        'description' => __('Resume Setting', 'drl_theme'),
+    ));
+
+    // Field name default Dian Ramdhani
+    $wp_customize->add_setting('name', array(
+        'default' => 'Dian Ramdhani',
+        'sanitize_callback' => 'drl_theme_sanitize_text',
+    ));
+    $wp_customize->add_control('name', array(
+        'label' => __('Name', 'drl_theme'),
+        'section' => 'resume_setting',
+        'type' => 'text',
+    ));
+
+    // Field list skills
+    $wp_customize->add_setting('skills', array(
+        'default' => 'Designer, Developer, Freelancer, Photographer',
+        'sanitize_callback' => 'drl_theme_sanitize_text',
+    ));
+    $wp_customize->add_control('skills', array(
+        'label' => __('Skill', 'drl_theme'),
+        'section' => 'resume_setting',
+        'type' => 'textarea',
+    ));
+}
+add_action('customize_register', 'drl_theme_customize_register');
