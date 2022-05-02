@@ -1,4 +1,3 @@
-<!-- ======= Resume Section ======= -->
 <section id="resume" class="resume">
     <div class="container" data-aos="fade-up">
 
@@ -62,4 +61,4 @@
         </div>
 
     </div>
-</section><!-- End Resume Section -->
+</section>

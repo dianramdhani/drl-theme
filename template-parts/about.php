@@ -1,4 +1,3 @@
-<!-- ======= About Section ======= -->
 <section id="about" class="about">
     <div class="container" data-aos="fade-up">
 
@@ -43,4 +42,4 @@
         </div>
 
     </div>
-</section><!-- End About Section -->
+</section>

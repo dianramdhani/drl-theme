@@ -1,4 +1,3 @@
-<!-- ======= Skills Section ======= -->
 <section id="skills" class="skills section-bg">
     <div class="container" data-aos="fade-up">
 
@@ -62,4 +61,4 @@
         </div>
 
     </div>
-</section><!-- End Skills Section -->
+</section>

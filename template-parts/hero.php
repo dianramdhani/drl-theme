@@ -1,4 +1,3 @@
-<!-- ======= Hero Section ======= -->
 <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
         <h1><?= get_theme_mod('name'); ?></h1>
@@ -11,4 +10,4 @@
             <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
         </div>
     </div>
-</section><!-- End Hero -->
+</section>

@@ -1,4 +1,3 @@
-<!-- ======= Services Section ======= -->
 <section id="services" class="services">
     <div class="container" data-aos="fade-up">
 
@@ -90,4 +89,4 @@
         </div>
 
     </div>
-</section><!-- End Services Section -->
+</section>
