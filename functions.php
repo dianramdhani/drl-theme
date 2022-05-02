@@ -86,3 +86,43 @@ function drl_theme_customize_register($wp_customize)
     ));
 }
 add_action('customize_register', 'drl_theme_customize_register');
+
+// custom post type
+function drl_theme_custom_post_type()
+{
+    register_post_type('portfolio', array(
+        'labels' => array(
+            'name' => __('Portfolio'),
+            'singular_name' => __('Portfolio'),
+            'add_new' => __('Add New'),
+            'add_new_item' => __('Add New Portfolio'),
+            'edit_item' => __('Edit Portfolio'),
+            'new_item' => __('New Portfolio'),
+            'view_item' => __('View Portfolio'),
+            'search_items' => __('Search Portfolio'),
+            'not_found' => __('No Portfolio found'),
+            'not_found_in_trash' => __('No Portfolio found in Trash'),
+            'parent_item_colon' => __('Parent Portfolio'),
+        ),
+        'public' => true,
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+            'editor',
+            'thumbnail',
+            'excerpt',
+            'comments',
+            'custom-fields',
+            'revisions',
+            'page-attributes',
+            'post-formats',
+        ),
+        'rewrite' => array(
+            'slug' => 'portfolio',
+            'with_front' => true,
+            'pages' => true,
+            'feeds' => true,
+        ),
+    ));
+}
+add_action('init', 'drl_theme_custom_post_type');
