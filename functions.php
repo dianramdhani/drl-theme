@@ -126,3 +126,19 @@ function drl_theme_custom_post_type()
     ));
 }
 add_action('init', 'drl_theme_custom_post_type');
+
+function drl_theme_notice_plugin_install()
+{
+    $plugin_name = 'Advanced Custom Fields';
+    $plugin_slug = 'advanced-custom-fields';
+    $plugin_path = 'advanced-custom-fields/acf.php';
+    $plugin_info_url = 'https://www.advancedcustomfields.com/';
+    $plugin_info_link = '<a href="' . $plugin_info_url . '" target="_blank">' . $plugin_name . '</a>';
+    $plugin_install_link = '<a href="' . wp_nonce_url(self_admin_url('update.php?action=install-plugin&plugin=' . $plugin_slug), 'install-plugin_' . $plugin_slug) . '">' . __('install now') . '</a>';
+    $plugin_activate_link = '<a href="' . admin_url('plugins.php') . '">' . __('activate plugin') . '</a>';
+    $plugin_message = sprintf(__('%s is not installed. Please %s or %s.', 'drl_theme'), $plugin_info_link, $plugin_install_link, $plugin_activate_link);
+    if (!is_plugin_active($plugin_path)) {
+        echo '<div class="notice notice-error"><p>' . $plugin_message . '</p></div>';
+    }
+}
+add_action('admin_notices', 'drl_theme_notice_plugin_install');
